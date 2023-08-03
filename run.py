@@ -208,7 +208,7 @@ def create_interface():
 def run():
     interface = create_interface()
     interface.close()
-    interface.launch(server_name="0.0.0.0", debug=True)
+    interface.launch(server_name="0.0.0.0", debug=True, share=True)
     
 
 if __name__ == "__main__":
