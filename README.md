@@ -17,4 +17,4 @@ Requirements:
 - pandas > 1.0
 - faker
 
-(Note: faker is only needed if you want to play with retraining data.)
+(Note: faker is only needed if you want to play with [retraining data](generate_data.py).)
