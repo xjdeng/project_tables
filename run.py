@@ -56,6 +56,10 @@ def getmapping(table, template, *args, **kwargs):
   return askgpt(msg, *args, **kwargs)
 
 def get_conversion_code(mapping_json, table, template, model = "gpt-4"):
+  if len(table) > 100:
+      table = table.sample(100)
+  if len(template) > 100:
+      template = template.sample(100)
   msg = f"""
 
 Assume the tables below are given as Pandas dataframes with variable names 'template' and 'table' along with the mapping_json mapping the columns in the template table to ones in the 'table' table, write Python code that'll convert the data from the format in 'table' to the format in the mapped column in 'template'.
