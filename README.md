@@ -6,7 +6,7 @@ The process takes several steps:
 
 1. Input the template and 2nd tables and a preliminary mapping of columns will be generated in JSON format.  The user is free to edit the mappings if they don't agree with them before submitting it for the next step.
 2. Now the LLM will generate the code needed to make the necessary data transformations to convert the select columns from the 2nd table to that in the template.  This code will be displayed for the user to modify if need be.
-3. The user submits the code and if it executes correctly, then the user will be given the final table to download as a .csv file.
+3. The user submits the code and if it executes correctly, then the user will be given the final table to download as a .csv file.  If the code that it generates doesn't execute correctly (resulting in a Gradio error or an error message), then you have 2 options: either try to edit the code to get it working or go back to step 2 and have GPT4 try to generate new code again.
 
 There's a [Jupyter notebook](colab.ipynb) for this as well as a pure [Python script](run.py).
 
