@@ -18,3 +18,7 @@ Requirements:
 - faker
 
 (Note: faker is only needed if you want to play with [retraining data](generate_data.py).)
+
+[Proposal for generating training data and "training" a better model](Retraining_Proposal.md)
+
+[Proposal for dealing with various edge cases](EdgeCases.md)
