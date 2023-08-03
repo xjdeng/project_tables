@@ -103,7 +103,7 @@ def mapping_interface(table, template):
   try:
     template_df = pd.read_csv(template.name)
     table_df = pd.read_csv(table.name)
-  except Exception as e:
+  except Exception:
     return "Error reading input .CSV files.  Make sure they are proper .CSVs.", "Error" 
 
   # Call the external function
