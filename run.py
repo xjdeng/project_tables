@@ -4,9 +4,12 @@ import time
 import pandas as pd
 import openai
 import gradio as gr
-import sys
+import os
+import getpass
 
-openai.api_key = "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"
+if not os.environ.get("OPENAI_API_KEY"):
+    print("OpenAI API Key not found! Please enter your key:")
+    os.environ['OPENAI_API_KEY'] = getpass.getpass("Enter your OpenAI key here:")
 
 def smartload_json(j):
   try:
